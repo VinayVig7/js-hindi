@@ -9,7 +9,7 @@
 
 console.log(null > 0);
 console.log(null == 0);
-console.log(null <= 0);
+console.log(null <= 0);   // js convert null into 0 as a number
 
 console.log(undefined > 0);
 console.log(undefined < 0);
