@@ -50,3 +50,30 @@ console.log(typeof myFunc);
 //Javascript static or dyanmic language
 // JavaScript is a dynamic language and not static, which means that variables can hold values of different types during runtime. 
 // Unlike languages such as Typescript or Java, you don't need to declare the data type of a variable explicitly.
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+//Stack and heap memory
+//Stack = Primitive & Heap = Non-Primitive
+
+let myYouTubeName = "vinaydotcom";
+let anotherName = myYouTubeName;
+anotherName = "vinayvig";
+
+console.log(myYouTubeName);
+console.log(anotherName); // Is se ye pta chlta hai ki primitive vaaley mei jb value esey assign krtey hai to copy assign hoti hai
+//original value nhi aati ek copy bn kr jaati hai is karn jb anotherName change kia to myYouTubeName change nhi hua.
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+};
+
+let userTwo = userOne;
+
+userTwo.email = "Vinay@google.com";
+console.log(userOne.email);
+console.log(userTwo.email);// isme original value he jaati hai matlb ki direct reference jata hai jis kaarn aagr hm ek mei change
+//krey ge dousrey mei bhi change ho jaye ga.
+
+
