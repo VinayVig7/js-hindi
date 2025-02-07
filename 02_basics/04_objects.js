@@ -61,3 +61,31 @@ console.log(Object.entries(tinderUser)); // ye sb properties output mei dekhey a
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 //Abhi ke liye itna he objects baki aagey pdey ge jb loops vgera bhi krey ge.
+
+const course = {
+    courseName: "js in hindi",
+    pice: "999",
+    courseInstructor: "Vinay"
+}
+// course.courseInstructor;
+
+const {courseInstructor} = course; // ek treeka to hai ye access krney ka or agr appko lgta hai ki name andr bda hai then go for 2nd way
+console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course;
+console.log(instructor); // 2nd way agr {} ye dikhe to matlb code ko destruct kia hai.. React mei bhi hota hai
+
+
+//+++++++++Json talk+++++++++++
+// {
+//     "name": "vinay",
+//     "roll no": "1",
+//     "field": "blockChain",
+//     "projects": "airdrops joining"
+// } // ye api hai iskey andr keys or values both string ki form mei hoti hai.
+
+// [
+//     {},
+//     {},
+//     {}
+// ] // ye bhi api array ki form mei
