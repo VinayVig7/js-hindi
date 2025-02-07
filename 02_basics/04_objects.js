@@ -88,4 +88,4 @@ console.log(instructor); // 2nd way agr {} ye dikhe to matlb code ko destruct ki
 //     {},
 //     {},
 //     {}
-// ] // ye bhi api array ki form mei
+// ] // ye bhi API array ki form mei
