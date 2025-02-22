@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="play">Play game</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    console.log("Understanding");
+    function stop(){
+        document.querySelector('#play').innerHTML = 'Game end';
+    }
+    const gameStop = setTimeout(stop, 2000);
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(gameStop);
+    })
+</script>
+</html>
