@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stylingTable{
+            color: white;
+            background-color: blueviolet;
+        }
+        .color{
+            background-color: rgb(128, 2, 100);
+            text-align: center;
+            align-items: center;
+        }
+        .color2{
+            background-color: rgb(120, 32, 0);
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body style="background-color: #212121;">
+    <table height = "200px" width = "200px" class = "stylingTable">
+        <tr>
+            <td class = "color2 photo" height = "50px" width = "100px">PHOTO</td>
+            <td class = "color2 followers" height = "50px" width = "100px">FOLLOWERS</td>
+        </tr>
+        <tr>
+            <td class = "color" height = "150px" width = "100px">
+                <img src = "" height = "100px" width = "100px" id = "photo">
+            </td>
+            <td class = "color" height = "150px" width = "100px">
+                <h2 id = "followers">
+                </h2>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    const photo = document.querySelector('#photo');
+    const followers = document.querySelector('#followers');
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            // console.log(data); // for understanding
+        
+            console.log(typeof data);
+            console.log(data.followers);
+            console.log(data.avatar_url); // all consoles for understanding 
+            followers.innerHTML = data.followers;
+            photo.getAttributeNode('src').value = data.avatar_url;
+        }
+    }
+    xhr.send();
+    
+</script>
+</html>
